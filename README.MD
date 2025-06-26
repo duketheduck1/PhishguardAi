@@ -31,6 +31,47 @@ This project is a web application designed to help users detect phishing attempt
 - To integrate with real threat intelligence feeds or APIs, update the data sources in `src/data/` and the detection logic in `src/utils/threatDetection.ts`.
 - For production deployment, follow best practices for securing API keys and sensitive data.
 
+## Firebase Integration
+
+This project leverages **Firebase** to provide real-time, secure, and scalable features alongside Gemini 2.0 Flash AI detection:
+
+### 1. Real-Time Alerts & Notifications
+- **Firebase Cloud Messaging (FCM):**
+  - Sends instant push notifications when a phishing threat is detected (e.g., "⚠️ Suspicious link detected in email.", "Phishing SMS blocked.").
+  - Supports web, Android, and iOS for consistent alerting.
+
+### 2. User Authentication & Security
+- **Firebase Auth:**
+  - Manages user access to the dashboard with email/password, Google Workspace (SSO), or phone number.
+  - Protects admin features, user data, and threat logs with secure roles.
+
+### 3. Threat Logs & Reports
+- **Firebase Firestore:**
+  - Stores scan results, suspicious entries (URLs, emails, phone numbers), user-submitted reports, and LLM (Gemini) responses.
+  - Enables real-time updates for dashboards and active threat feeds.
+
+### 4. Analytics & Monitoring
+- **Firebase Analytics:**
+  - Tracks user interactions and feature usage to improve detection models and Gemini prompts.
+
+### 5. Hosting the Frontend
+- **Firebase Hosting:**
+  - Securely deploys the React/Vite frontend with built-in SSL and CDN for fast, reliable access.
+
+### 6. User Reporting System
+- Users can report false positives or new phishing threats via Firestore.
+- Gemini 2.0 Flash can auto-analyze user-submitted data for threat classification.
+
+---
+
+## 🤖 Firebase + Gemini 2.0 = Real-Time, AI-Powered Protection
+
+### Summary
+- **Gemini 2.0** provides intelligent phishing detection and explanations.
+- **Firebase** powers real-time alerts, user management, secure data storage, frontend hosting, and coordinated multi-device protection and reporting.
+
+Let us know if you need an architecture diagram or a full Firebase config setup with Gemini integration!
+
 ## Credits
 - Powered by Gemini 2.0 Flash for AI-driven phishing detection.
 - Developed as part of the HackTheBrain project.
