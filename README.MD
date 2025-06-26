@@ -1,4 +1,4 @@
-# Project Bolt: Phishing Detection and Threat Monitoring
+# PhishGuard AI: Phishing Detection and Threat Monitoring
 
 This project is a web application designed to help users detect phishing attempts and monitor cybersecurity threats in real time. The application provides several features, including:
 
